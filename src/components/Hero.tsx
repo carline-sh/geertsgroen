@@ -10,12 +10,13 @@ export function Hero() {
                 </div>
                 <div className="flex h-full items-end py-24">
                     <div className="text-white space-y-4">
-                        <div className="text-2xl">
-                            Wij zijn cool en deze text moet beter
-                        </div>
                         <div>
-                            als jij dat ook vind stuur ons een berichtje hieronder
+                            Hoveniersbedrijf Geerts Groen
                         </div>
+                        <div className="text-2xl">
+                            Tuinen die met u meegroeien.
+                        </div>
+
                         <a href={"https://wa.me/" + PHONE} className="font-sans flex items-center gap-2 border-2 bg-white border-white text-[#efc51e] font-bold px-4 py-2 w-fit" target="_blank">
                             <FaWhatsapp />
                             <span>Stuur ons een berichtje!</span>
