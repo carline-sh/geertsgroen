@@ -1,7 +1,9 @@
 import "./app.css"
+import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
+import { Works } from "./components/Works";
 
 export default function App() {
 
@@ -10,8 +12,9 @@ export default function App() {
       <Navbar />
       <div className="flex-1">
         <Hero />
+        <Works />
         <Hero />
-        <Hero />
+        <Contact />
       </div>
       <Footer />
     </div>
