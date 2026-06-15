@@ -40,11 +40,11 @@ const works: WerkDing[] = [
 export function Works() {
     return (
         <div
-            className="w-full"
-            style={{ backgroundImage: `url(/public/worksbg.png)` }}
+            className="w-full bg-cover bg-bottom"
+            style={{ backgroundImage: `url(/public/werkbg.jpg)` }}
         >
             <div className="max-w-7xl mx-auto wrap-break-word md:py-4 md:px-8">
-                <div className="bg-[#efc51e] p-4 md:px-10 md:py-8 max-w-5xl mx-auto space-y-4 md:my-24">
+                <div className="bg-[#efc51e]/60 backdrop-blur-sm p-4 md:px-10 md:py-8 max-w-5xl mx-auto space-y-4 md:my-24">
                     <div className="text-2xl font-bold text-white text-center">Wat wij doen</div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {
