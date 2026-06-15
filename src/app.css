@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.link {
+  @apply hover:underline cursor-pointer;
+}
