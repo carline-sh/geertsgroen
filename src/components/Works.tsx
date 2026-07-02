@@ -20,7 +20,7 @@ export function Works() {
             className="w-full bg-cover bg-bottom relative scroll-mt-28"
             style={{ backgroundImage: `url(/werkbg.jpg)` }}
         >
-            <div className="absolute inset-0 bg-[#FDC005]/60 backdrop-blur-sm" />
+            <div className="absolute inset-0 backdrop-blur-sm" />
             <div className="relative max-w-7xl mx-auto wrap-break-word px-4 md:px-8 py-16 md:py-28">
                 <div className="max-w-5xl mx-auto space-y-8">
                     <h2 className="text-3xl md:text-4xl merriweather-bold text-white text-center">

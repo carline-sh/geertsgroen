@@ -8,7 +8,7 @@ import { Works } from "./components/Works";
 export default function App() {
 
   return (
-    <div className="min-h-screen flex flex-col font-sans">
+    <div className="min-h-screen flex flex-col merriweather">
       <Navbar />
       <div className="flex-1">
         <Hero />

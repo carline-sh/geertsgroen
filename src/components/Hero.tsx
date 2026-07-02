@@ -68,7 +68,7 @@ export function Hero() {
 
             <div className="relative max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
                 <div className="flex items-end h-full">
-                    <img src="/broski.webp" className="max-h-[60vh]" />
+                    <img src="/broski.webp" className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} />
                 </div>
                 <div className="flex flex-col justify-end h-full pt-16 pb-36">
                     <div className="text-white space-y-6">
@@ -97,9 +97,8 @@ export function Hero() {
                     <button
                         key={i}
                         onClick={() => goTo(i)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                            i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
-                        }`}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
+                            }`}
                         aria-label={`Foto ${i + 1}`}
                     />
                 ))}
