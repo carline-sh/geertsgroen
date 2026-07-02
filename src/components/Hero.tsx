@@ -1,28 +1,108 @@
+import { useState, useEffect, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { PHONE } from "../config";
 
+const images = [
+    "/garden1.jpg",
+    "/garden2.jpg",
+    "/garden3.jpg",
+];
+
 export function Hero() {
+    const [current, setCurrent] = useState(0);
+    const [fade, setFade] = useState(true);
+    const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
+    const interactedRef = useRef(false);
+
+    const resetTimer = useCallback(() => {
+        clearInterval(timerRef.current);
+        timerRef.current = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+        }, 5000);
+    }, []);
+
+    useEffect(() => {
+        resetTimer();
+        return () => clearInterval(timerRef.current);
+    }, [resetTimer]);
+
+    const goTo = useCallback((i: number) => {
+        setFade(false);
+        setTimeout(() => {
+            setCurrent(i);
+            setFade(true);
+        }, 200);
+        interactedRef.current = true;
+        resetTimer();
+    }, [resetTimer]);
+
     return (
-        <div className="w-full min-h-[65vh] bg-[#b69aeb] flex items-end">
-            <div className="max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8">
+        <div className="w-full min-h-[80vh] relative flex items-end overflow-hidden">
+            {images.map((src, i) => (
+                <div
+                    key={src}
+                    className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
+                    style={{
+                        backgroundImage: `url(${src})`,
+                        opacity: i === current && fade ? 1 : 0,
+                    }}
+                />
+            ))}
+
+            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
+
+            <button
+                onClick={() => goTo((current - 1 + images.length) % images.length)}
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                aria-label="Vorige foto"
+            >
+                ‹
+            </button>
+            <button
+                onClick={() => goTo((current + 1) % images.length)}
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                aria-label="Volgende foto"
+            >
+                ›
+            </button>
+
+            <div className="relative max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
                 <div className="flex items-end h-full">
-                    <img src="/public/broski.webp" className="max-h-[60vh]" />
+                    <img src="/broski.webp" className="max-h-[60vh]" />
                 </div>
-                <div className="flex h-full items-end py-24">
-                    <div className="text-white space-y-4">
-                        <div>
+                <div className="flex flex-col justify-end h-full pt-16 pb-36">
+                    <div className="text-white space-y-6">
+                        <div className="merriweather-bold text-lg tracking-wide uppercase opacity-80">
                             Hoveniersbedrijf Geerts Groen
                         </div>
-                        <div className="text-2xl">
+                        <div className="text-3xl md:text-4xl merriweather-bold leading-tight">
                             Tuinen die met u meegroeien.
                         </div>
 
-                        <a href={"https://wa.me/" + PHONE} className="font-sans flex items-center gap-2 border-2 bg-white border-white text-[#efc51e] font-bold px-4 py-2 w-fit" target="_blank">
-                            <FaWhatsapp />
+                        <a
+                            href={"https://wa.me/" + PHONE}
+                            className="font-sans inline-flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 w-fit"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaWhatsapp className="text-xl" />
                             <span>Stuur ons een berichtje!</span>
                         </a>
                     </div>
                 </div>
+            </div>
+
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+                {images.map((_, i) => (
+                    <button
+                        key={i}
+                        onClick={() => goTo(i)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                            i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
+                        }`}
+                        aria-label={`Foto ${i + 1}`}
+                    />
+                ))}
             </div>
         </div>
     );
