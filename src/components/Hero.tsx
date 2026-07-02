@@ -72,7 +72,7 @@ export function Hero() {
                 </div>
                 <div className="flex flex-col justify-end h-full pt-16 pb-36">
                     <div className="text-white space-y-6">
-                        <div className="merriweather-bold text-lg tracking-wide uppercase opacity-80">
+                        <div className="font-semibold text-lg tracking-wide opacity-80">
                             Hoveniersbedrijf Geerts Groen
                         </div>
                         <div className="text-3xl md:text-4xl merriweather-bold leading-tight">
