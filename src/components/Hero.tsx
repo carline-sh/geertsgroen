@@ -49,7 +49,7 @@ export function Hero() {
                 />
             ))}
 
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40" />
+            <div className="absolute inset-0 bg-linear-to-r from-black/60 to-black/40" />
 
             <button
                 onClick={() => goTo((current - 1 + images.length) % images.length)}
