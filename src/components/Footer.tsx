@@ -3,7 +3,7 @@ import { EMAIL, KVK, PHONE } from "../config";
 
 export function Footer() {
     return (
-        <div className="w-full -mt-6" style={{ backgroundImage: `url(/public/grondvoorvoeter.png)` }}>
+        <div className="relative z-20 w-full -mt-6" style={{ backgroundImage: `url(/public/grondvoorvoeter.png)` }}>
             <div className="w-full max-w-7xl mx-auto min-h-48 md:min-h-64 text-white pt-12 px-4">
                 <div className="h-20">
                     <img src="/public/LogoLetterworkWhite.svg" alt="logo" className="h-20 object-contain " />
