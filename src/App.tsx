@@ -1,4 +1,5 @@
 import "./app.css"
+import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
@@ -12,6 +13,7 @@ export default function App() {
       <Navbar />
       <div className="flex-1">
         <Hero />
+        <About />
         <Works />
         <Contact />
       </div>
