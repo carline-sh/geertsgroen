@@ -1,17 +1,4 @@
-const highlights = [
-    {
-        title: "Persoonlijk advies",
-        text: "We luisteren naar uw wensen en denken mee over de tuin die bij u past.",
-    },
-    {
-        title: "Vakmanschap",
-        text: "Van onderhoud tot aanleg: alles wordt met zorg en oog voor detail uitgevoerd.",
-    },
-    {
-        title: "Duurzaam groen",
-        text: "We werken met respect voor uw tuin, de seizoenen en het milieu.",
-    },
-];
+import { heading, body, highlights } from '../../content/about.json';
 
 export function About() {
     return (
@@ -20,12 +7,10 @@ export function About() {
                 <div className="max-w-5xl mx-auto space-y-10 md:space-y-12">
                     <div className="space-y-4 text-center">
                         <h2 className="text-3xl md:text-4xl merriweather-bold text-[#2E3A2B]">
-                            Over Geerts Groen
+                            {heading}
                         </h2>
                         <p className="text-lg text-[#2E3A2B]/80 leading-relaxed">
-                            Bij Hoveniersbedrijf Geerts Groen draait alles om tuinen waar u zich thuis in voelt.
-                            Of het nu gaat om onderhoud, beplanting of een complete make-over: wij zorgen dat uw
-                            buitenruimte mooi blijft en met u meegroeit.
+                            {body}
                         </p>
                     </div>
 

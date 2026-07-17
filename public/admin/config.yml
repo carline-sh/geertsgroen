@@ -1,0 +1,269 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: carline-sh/geertsgroen
+
+media_folder: /public/images
+public_folder: /images
+
+app_title: Geerts Groen - Beheer
+logo:
+  src: /images/logo.svg
+  show_in_header: true
+
+i18n:
+  default_locale: nl
+
+slug:
+  encoding: unicode
+  clean_accents: true
+  sanitize_replacement: '-'
+  lowercase: true
+
+singletons:
+  - name: company
+    label: Bedrijfsgegevens
+    icon: settings
+    file: content/company.json
+    format: json
+    fields:
+      - name: companyName
+        label: Bedrijfsnaam
+        widget: string
+        hint: Bijv. Geerts Groen
+      - name: kvk
+        label: KVK Nummer
+        widget: string
+        hint: Kamer van Koophandel nummer
+      - name: phone
+        label: Telefoonnummer
+        widget: string
+        hint: Bijv. 0612345678
+      - name: email
+        label: E-mailadres
+        widget: string
+        hint: Bijv. info@geertsgroen.nl
+      - name: address
+        label: Adres
+        widget: string
+        required: false
+        hint: Straat + huisnummer
+      - name: postalCity
+        label: Postcode + Plaats
+        widget: string
+        required: false
+        hint: Bijv. 1234 AB Amsterdam
+      - name: whatsappNumber
+        label: WhatsApp nummer
+        widget: string
+        hint: Internationaal nummer met landcode, bijv. 31612345678
+      - name: openingHours
+        label: Openingstijden
+        widget: text
+        required: false
+        hint: 'Bijv. "Ma-Vr: 08:00 - 17:00" of laat leeg'
+
+  - name: hero
+    label: Hero Sectie
+    icon: home
+    file: content/hero.json
+    format: json
+    fields:
+      - name: subtitle
+        label: Subtitel
+        widget: string
+        hint: Bijv. "Hoveniersbedrijf Geerts Groen"
+      - name: title
+        label: Hoofdtitel
+        widget: string
+        hint: Bijv. "Tuinen die met u meegroeien."
+      - name: ctaText
+        label: Knop tekst
+        widget: string
+        hint: Bijv. "Stuur ons een berichtje!"
+      - name: images
+        label: Achtergrond afbeeldingen
+        widget: list
+        hint: Voeg minimaal 2 afbeeldingen toe voor een mooie slider
+        summary: '{{image | default("Geen afbeelding")}}'
+        fields:
+          - name: image
+            label: Afbeelding
+            widget: image
+            hint: 'Aanbevolen formaat: 1920x1080 of breder'
+
+  - name: about
+    label: Over Ons
+    icon: chat_info
+    file: content/about.json
+    format: json
+    fields:
+      - name: heading
+        label: Koptekst
+        widget: string
+        hint: Bijv. "Over Geerts Groen"
+      - name: body
+        label: Tekst
+        widget: richtext
+        hint: Het hoofdverhaal over het bedrijf
+      - name: highlights
+        label: Hoogtepunten / USP's
+        widget: list
+        summary: '{{title}}'
+        hint: Bijv. Persoonlijk advies, Vakmanschap, Duurzaam groen
+        fields:
+          - name: title
+            label: Titel
+            widget: string
+            hint: Bijv. "Persoonlijk advies"
+          - name: text
+            label: Tekst
+            widget: text
+            hint: Bijv. "We luisteren naar uw wensen..."
+
+  - name: services
+    label: Diensten
+    icon: construction
+    file: content/services.json
+    format: json
+    fields:
+      - name: heading
+        label: Koptekst
+        widget: string
+        hint: Bijv. "Wat wij doen"
+      - name: backgroundImage
+        label: Achtergrond afbeelding
+        widget: image
+        hint: 'Aanbevolen formaat: 1920x1080'
+      - name: servicesList
+        label: Diensten lijst
+        widget: list
+        summary: '{{serviceName}}'
+        hint: Bijv. Snoeien, Maaien, Beplanting, enz.
+        fields:
+          - name: serviceName
+            label: Dienst naam
+            widget: string
+            hint: Bijv. "Snoeien"
+
+  - name: contact
+    label: Contact Sectie
+    icon: mail
+    file: content/contact.json
+    format: json
+    fields:
+      - name: heading
+        label: Koptekst
+        widget: string
+        hint: Bijv. "Contact"
+      - name: body
+        label: Tekst
+        widget: text
+        hint: Bijv. "Neem contact met ons op voor een vrijblijvende offerte."
+      - name: ctaText
+        label: Knop tekst
+        widget: string
+        hint: Bijv. "Stuur ons een berichtje!"
+
+collections:
+  - name: projecten
+    label: Projecten
+    label_singular: Project
+    description: Projecten die het bedrijf heeft uitgevoerd, met foto's en beschrijvingen.
+    folder: /content/projecten
+    format: yaml-frontmatter
+    create: true
+    delete: true
+    identifier_field: title
+    slug: '{{slug}}'
+    preview_path: '/projecten/{{slug}}'
+    summary: '{{title}} - {{date | date("DD MMM YYYY")}}'
+    fields:
+      - name: title
+        label: Project titel
+        widget: string
+        hint: Bijv. "Tuinrenovatie in Amsterdam"
+      - name: date
+        label: Datum
+        widget: datetime
+        type: date
+      - name: client
+        label: Opdrachtgever
+        widget: string
+        required: false
+        hint: Bijv. "Familie Janssen"
+      - name: location
+        label: Locatie
+        widget: string
+        required: false
+        hint: Bijv. "Amsterdam"
+      - name: category
+        label: Categorie
+        widget: select
+        required: false
+        options:
+          - { label: "Tuinontwerp", value: "tuinontwerp" }
+          - { label: "Beplanting", value: "beplanting" }
+          - { label: "Onderhoud", value: "onderhoud" }
+          - { label: "Renovatie", value: "renovatie" }
+          - { label: "Bomen & Struiken", value: "bomen-struiken" }
+          - { label: "Overig", value: "overig" }
+      - name: description
+        label: Korte beschrijving
+        widget: text
+        hint: Korte samenvatting voor de projectenlijst
+      - name: images
+        label: Project foto's
+        widget: list
+        required: false
+        summary: '{{image | default("Geen afbeelding")}}'
+        fields:
+          - name: image
+            label: Foto
+            widget: image
+      - name: body
+        label: Uitgebreide beschrijving
+        widget: richtext
+        required: false
+        hint: Het volledige verhaal over dit project
+
+  - name: testimonials
+    label: Reviews
+    label_singular: Review
+    description: Reviews van tevreden klanten.
+    folder: /content/testimonials
+    format: json
+    create: true
+    delete: true
+    identifier_field: clientName
+    slug: '{{slug}}'
+    summary: '{{clientName}} - "{{text | truncate(60)}}"'
+    fields:
+      - name: clientName
+        label: Naam klant
+        widget: string
+        hint: Bijv. "Mevrouw De Vries"
+      - name: location
+        label: Plaats
+        widget: string
+        required: false
+        hint: Bijv. "Amsterdam"
+      - name: text
+        label: Review tekst
+        widget: text
+        hint: Wat de klant zegt over het bedrijf
+      - name: rating
+        label: Beoordeling
+        widget: number
+        value_type: int
+        step: 1
+        min: 1
+        max: 5
+        required: false
+        hint: Aantal sterren (1-5)
+      - name: date
+        label: Datum
+        widget: datetime
+        type: date
+        required: false

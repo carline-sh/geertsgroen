@@ -1,12 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { PHONE } from "../config";
-
-const images = [
-    "/garden1.jpg",
-    "/garden2.jpg",
-    "/garden3.jpg",
-];
+import { phone } from "../../content/company.json";
+import { title, subtitle, ctaText, images } from '../../content/hero.json';
 
 export function Hero() {
     const [current, setCurrent] = useState(0);
@@ -40,10 +35,10 @@ export function Hero() {
         <div className="w-full min-h-[80vh] relative flex items-end overflow-hidden">
             {images.map((src, i) => (
                 <div
-                    key={src}
+                    key={src.image}
                     className="absolute inset-0 bg-cover bg-center transition-opacity duration-500"
                     style={{
-                        backgroundImage: `url(${src})`,
+                        backgroundImage: `url(${src.image})`,
                         opacity: i === current && fade ? 1 : 0,
                     }}
                 />
@@ -68,25 +63,25 @@ export function Hero() {
 
             <div className="relative max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
                 <div className="flex items-end h-full">
-                    <img src="/broski.webp" className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} />
+                    <img src="/images/broski.webp" className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} />
                 </div>
                 <div className="flex flex-col justify-end h-full pt-16 pb-36">
                     <div className="text-white space-y-6">
                         <div className="font-semibold text-lg tracking-wide opacity-80">
-                            Hoveniersbedrijf Geerts Groen
+                            {subtitle}
                         </div>
                         <div className="text-3xl md:text-4xl merriweather-bold leading-tight">
-                            Tuinen die met u meegroeien.
+                            {title}
                         </div>
 
                         <a
-                            href={"https://wa.me/" + PHONE}
+                            href={"https://wa.me/" + phone}
                             className="font-sans inline-flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 w-fit"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <FaWhatsapp className="text-xl" />
-                            <span>Stuur ons een berichtje!</span>
+                            <span>{ctaText}</span>
                         </a>
                     </div>
                 </div>

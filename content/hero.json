@@ -1,0 +1,10 @@
+{
+  "subtitle": "Hoveniersbedrijf Geerts Groen",
+  "title": "Tuinen die met u meegroeien.",
+  "ctaText": "Stuur ons een berichtje!",
+  "images": [
+    { "image": "/images/garden1.jpg" },
+    { "image": "/images/garden2.jpg" },
+    { "image": "/images/garden3.jpg" }
+  ]
+}

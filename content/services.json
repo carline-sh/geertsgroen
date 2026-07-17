@@ -1,0 +1,15 @@
+{
+  "heading": "Wat wij doen",
+  "backgroundImage": "/images/werkbg.jpg",
+  "servicesList": [
+    { "serviceName": "Snoeien" },
+    { "serviceName": "Maaien" },
+    { "serviceName": "Beplanting" },
+    { "serviceName": "Onderhoud" },
+    { "serviceName": "Plant speciaalzorg" },
+    { "serviceName": "Tuinontwerp" },
+    { "serviceName": "Bomen" },
+    { "serviceName": "Struiken" },
+    { "serviceName": "Renovatie" }
+  ]
+}
