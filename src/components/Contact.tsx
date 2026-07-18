@@ -18,7 +18,7 @@ export function Contact() {
                     </div>
                 </div>
             </div>
-            <div className="relative max-w-7xl mx-auto wrap-break-word pt-20 md:pt-28 pb-12 md:pb-16 text-white flex items-center justify-center px-4">
+            <div className="relative max-w-7xl mx-auto wrap-break-word pt-20 md:pt-28 pb-12 md:pb-24 text-white flex items-center justify-center px-4">
                 <div className="space-y-4 text-center">
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold">{heading}</h2>
                     <p className="text-lg opacity-90">{body}</p>
