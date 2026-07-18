@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { phone } from "../../content/company.json";
-import { title, subtitle, ctaText, images } from '../../content/hero.json';
+import { title, subtitle, ctaText, portraitImage, images } from '../../content/hero.json';
 
 export function Hero() {
     const [current, setCurrent] = useState(0);
@@ -63,7 +63,7 @@ export function Hero() {
 
             <div className="relative max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
                 <div className="flex items-end h-full">
-                    <img src="/images/broski.webp" className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} />
+                    <img src={portraitImage} className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} />
                 </div>
                 <div className="flex flex-col justify-end h-full pt-16 pb-36">
                     <div className="text-white space-y-6">

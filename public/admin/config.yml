@@ -82,6 +82,10 @@ singletons:
         label: Knop tekst
         widget: string
         hint: Bijv. "Stuur ons een berichtje!"
+      - name: portraitImage
+        label: Portret afbeelding
+        widget: image
+        hint: 'Persoonsfoto links in de hero. Aanbevolen: webp, staand formaat'
       - name: images
         label: Achtergrond afbeeldingen
         widget: list
