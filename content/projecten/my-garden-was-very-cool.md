@@ -1,18 +1,14 @@
 ---
-title: My Garden was very cool
+title: Vormen snoeien in Buxus
 date: 2026-07-17
-description: Een complete tuinrenovatie met nieuwe beplanting, snoeiwerk en onderhoud.
-location: Amsterdam
-category: renovatie
+client: Gemeente Alphen-Chaam
+location: Chaam
+category: bomen-struiken
+description: Gemeentelijke tuin opgeschoond en frisser maken.
 images:
-  - image: /images/garden1.jpg
-  - image: /images/garden2.jpg
+  - image: /images/pexels-katerynahnidash-18528934.jpg
 ---
 
-I did a lot of cool things in this garden.
+![](https://picsum.photos/id/824/1920/1280.webp)
 
-I liked it.
-
-Twas a nice garden.
-
-Have a good day thanks bye
+Als je wordt uitgenodigd door de wethouder van groen van de gemeente Alphen-Chaam, ga je natuurlijk graag langs. Samen met het groen team hebben we gekeken naar speelse oplossingen voor de tuintjes in Chaam. Het eindresultaat is schitterend, mooie golvende vormen in een voorheen recht toe recht aan bosje.

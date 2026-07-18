@@ -1,4 +1,5 @@
 import { Link, getRouteApi } from "@tanstack/react-router";
+import ReactMarkdown from "react-markdown";
 import {
     formatProjectDate,
     getCategoryLabel,
@@ -29,7 +30,7 @@ export function ProjectPage() {
 
     const coverImage = getProjectCoverImage(project);
     const categoryLabel = getCategoryLabel(project.category);
-    const paragraphs = project.body.split(/\n\s*\n/).filter(Boolean);
+    const galleryImages = project.images.slice(1);
 
     return (
         <article className="w-full bg-[#F5F0E6]">
@@ -52,13 +53,9 @@ export function ProjectPage() {
                     >
                         ← Terug naar projecten
                     </Link>
-                    {categoryLabel && (
-                        <div className="inline-flex rounded-full bg-[#FDC005] text-[#2E3A2B] px-3 py-1 text-sm font-semibold">
-                            {categoryLabel}
-                        </div>
-                    )}
                     <h1 className="text-3xl md:text-5xl miranda-sans-bold leading-tight">{project.title}</h1>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-white/80">
+                        {categoryLabel && <span>{categoryLabel}</span>}
                         <span>{formatProjectDate(project.date)}</span>
                         {project.location && <span>{project.location}</span>}
                         {project.client && <span>{project.client}</span>}
@@ -71,17 +68,23 @@ export function ProjectPage() {
                     <p className="text-xl text-[#2E3A2B]/85 leading-relaxed">{project.description}</p>
                 )}
 
-                {paragraphs.length > 0 && (
-                    <div className="space-y-4 text-[#2E3A2B]/80 leading-relaxed text-lg">
-                        {paragraphs.map((paragraph) => (
-                            <p key={paragraph}>{paragraph}</p>
-                        ))}
+                {project.body && (
+                    <div className="space-y-4 text-[#2E3A2B]/80 leading-relaxed text-lg [&_p]:mb-4 [&_img]:my-6 [&_img]:w-full [&_img]:rounded-xl [&_img]:object-cover">
+                        <ReactMarkdown
+                            components={{
+                                img: ({ src, alt }) => (
+                                    <img src={src} alt={alt || project.title} className="w-full rounded-xl object-cover" />
+                                ),
+                            }}
+                        >
+                            {project.body}
+                        </ReactMarkdown>
                     </div>
                 )}
 
-                {project.images.length > 1 && (
+                {galleryImages.length > 0 && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {project.images.slice(1).map((item) => (
+                        {galleryImages.map((item) => (
                             <img
                                 key={item.image}
                                 src={item.image}
