@@ -1,7 +1,7 @@
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import { resolve } from 'node:path'
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 const admin = (): Plugin => ({
   name: 'serve-admin',
@@ -20,5 +20,13 @@ const admin = (): Plugin => ({
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [admin(), react(), tailwindcss()],
+  plugins: [
+    admin(),
+    tanstackRouter({
+      target: 'react',
+      autoCodeSplitting: true,
+    }),
+    react(),
+    tailwindcss(),
+  ],
 })

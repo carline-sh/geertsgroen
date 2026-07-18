@@ -32,7 +32,7 @@ export function Hero() {
     }, [resetTimer]);
 
     return (
-        <div className="w-full min-h-[80vh] relative flex items-end overflow-hidden">
+        <div id="top" className="w-full min-h-[80vh] relative flex items-end overflow-hidden">
             {images.map((src, i) => (
                 <div
                     key={src.image}
