@@ -6,7 +6,7 @@ export function About() {
             <div className="max-w-7xl mx-auto wrap-break-word px-4 md:px-8 py-16 md:py-24">
                 <div className="max-w-5xl mx-auto space-y-10 md:space-y-12">
                     <div className="space-y-4 text-center">
-                        <h2 className="text-3xl md:text-4xl merriweather-bold text-[#2E3A2B]">
+                        <h2 className="text-3xl md:text-4xl miranda-sans-bold text-[#2E3A2B]">
                             {heading}
                         </h2>
                         <p className="text-lg text-[#2E3A2B]/80 leading-relaxed">
@@ -20,7 +20,7 @@ export function About() {
                                 key={item.title}
                                 className="bg-[#2E3A2B]/10 rounded-xl p-5 md:p-6 space-y-2 shadow-sm"
                             >
-                                <h3 className="merriweather-bold text-[#2E3A2B]">{item.title}</h3>
+                                <h3 className="miranda-sans-bold text-[#2E3A2B]">{item.title}</h3>
                                 <p className="text-[#2E3A2B]/75 leading-relaxed">{item.text}</p>
                             </div>
                         ))}

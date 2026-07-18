@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
-import { phone } from "../../content/company.json";
+import { whatsappNumber } from "../../content/company.json";
 import { title, subtitle, ctaText, portraitImage, images } from '../../content/hero.json';
 
 export function Hero() {
@@ -70,12 +70,12 @@ export function Hero() {
                         <div className="font-semibold text-lg tracking-wide opacity-80">
                             {subtitle}
                         </div>
-                        <div className="text-3xl md:text-4xl merriweather-bold leading-tight">
+                        <div className="text-3xl md:text-4xl miranda-sans-bold leading-tight">
                             {title}
                         </div>
 
                         <a
-                            href={"https://wa.me/" + phone}
+                            href={"https://wa.me/" + whatsappNumber}
                             className="font-sans inline-flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200 w-fit"
                             target="_blank"
                             rel="noopener noreferrer"

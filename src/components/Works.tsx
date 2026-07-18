@@ -10,7 +10,7 @@ export function Works() {
             <div className="absolute inset-0 backdrop-blur-sm" />
             <div className="relative max-w-7xl mx-auto wrap-break-word px-4 md:px-8 py-16 md:py-28">
                 <div className="max-w-3xl mx-auto space-y-8">
-                    <h2 className="text-3xl md:text-4xl merriweather-bold text-white text-center">
+                    <h2 className="text-3xl md:text-4xl miranda-sans-bold text-white text-center">
                         {heading}
                     </h2>
 
