@@ -18,7 +18,7 @@ export function About() {
                         {highlights.map((item) => (
                             <div
                                 key={item.title}
-                                className="bg-[#2E3A2B]/10 rounded-xl p-5 md:p-6 space-y-2 shadow-sm"
+                                className="bg-white rounded-xl p-5 md:p-6 space-y-2 shadow-sm"
                             >
                                 <h3 className="miranda-sans-bold text-[#2E3A2B]">{item.title}</h3>
                                 <p className="text-[#2E3A2B]/75 leading-relaxed">{item.text}</p>

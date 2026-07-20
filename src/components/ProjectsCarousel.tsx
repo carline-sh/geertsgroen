@@ -44,7 +44,7 @@ export function ProjectsCarousel() {
     const categoryLabel = getCategoryLabel(project.category);
 
     return (
-        <section id="projecten" className="w-full bg-white scroll-mt-28">
+        <section id="projecten" className="w-full bg-[#F5F0E6] scroll-mt-28">
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
                 <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 md:mb-12">
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold text-[#2E3A2B]">
@@ -78,7 +78,7 @@ export function ProjectsCarousel() {
                     <Link
                         to="/projecten/$slug"
                         params={{ slug: project.slug }}
-                        className="group block overflow-hidden rounded-2xl bg-[#F5F0E6] shadow-md hover:shadow-xl transition-shadow duration-300"
+                        className="group block overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
                     >
                         <div className="grid grid-cols-1 md:grid-cols-2">
                             <div
