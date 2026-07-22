@@ -48,20 +48,20 @@ export function Hero() {
 
             <button
                 onClick={() => goTo((current - 1 + images.length) % images.length)}
-                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                 aria-label="Vorige foto"
             >
                 ‹
             </button>
             <button
                 onClick={() => goTo((current + 1) % images.length)}
-                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                 aria-label="Volgende foto"
             >
                 ›
             </button>
 
-            <div className="relative max-w-7xl mx-auto wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
+            <div className="relative max-w-7xl mx-auto px-4 md:px-0 wrap-break-word grid grid-cols-1 md:grid-cols-2 h-full gap-8 w-full">
                 <div className="flex items-end h-full">
                     {/* <img src={portraitImage} className="max-h-[60vh] select-none" onDragStart={(e) => e.preventDefault()} /> */}
                 </div>
@@ -92,10 +92,11 @@ export function Hero() {
                     <button
                         key={i}
                         onClick={() => goTo(i)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60"
-                            }`}
+                        className="w-11 h-11 -mx-3 flex items-center justify-center cursor-pointer"
                         aria-label={`Foto ${i + 1}`}
-                    />
+                    >
+                        <span className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60 w-2"}`} />
+                    </button>
                 ))}
             </div>
         </div>

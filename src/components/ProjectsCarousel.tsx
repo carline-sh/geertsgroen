@@ -60,14 +60,14 @@ export function ProjectsCarousel() {
                         <>
                             <button
                                 onClick={() => goTo((current - 1 + projects.length) % projects.length)}
-                                className="absolute left-0 md:-left-6 top-1/2 -translate-y-1/2 z-10 text-[#2E3A2B]/40 hover:text-[#2E3A2B] text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                                className="absolute left-0 md:-left-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-[#2E3A2B]/40 hover:text-[#2E3A2B] text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                                 aria-label="Vorig project"
                             >
                                 ‹
                             </button>
                             <button
                                 onClick={() => goTo((current + 1) % projects.length)}
-                                className="absolute right-0 md:-right-6 top-1/2 -translate-y-1/2 z-10 text-[#2E3A2B]/40 hover:text-[#2E3A2B] text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                                className="absolute right-0 md:-right-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-[#2E3A2B]/40 hover:text-[#2E3A2B] text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                                 aria-label="Volgend project"
                             >
                                 ›
@@ -127,13 +127,15 @@ export function ProjectsCarousel() {
                                 <button
                                     key={item.slug}
                                     onClick={() => goTo(index)}
-                                    className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                                    className="w-11 h-11 -mx-3 flex items-center justify-center cursor-pointer"
+                                    aria-label={`Project ${index + 1}: ${item.title}`}
+                                >
+                                    <span className={`h-2 rounded-full transition-all duration-300 ${
                                         index === current
                                             ? "w-6 bg-[#2E3A2B]"
                                             : "w-2 bg-[#2E3A2B]/30 hover:bg-[#2E3A2B]/50"
-                                    }`}
-                                    aria-label={`Project ${index + 1}: ${item.title}`}
-                                />
+                                    }`} />
+                                </button>
                             ))}
                         </div>
                     )}

@@ -3,7 +3,7 @@ import { email, companyName, kvk, phone } from "../../content/company.json";
 
 export function Footer() {
     return (
-        <div className="relative z-20 w-full -mt-6" style={{ backgroundImage: `url(/images/grondvoorvoeter.png)` }}>
+        <div className="relative z-20 w-full -mt-6 pb-12" style={{ backgroundImage: `url(/images/grondvoorvoeter.png)` }}>
             <div className="w-full max-w-7xl mx-auto min-h-48 md:min-h-64 text-white pt-12 px-4 flex justify-between">
                 <div className="">
                     <div className="h-20">
