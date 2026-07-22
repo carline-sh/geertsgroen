@@ -22,9 +22,9 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="relative grow">
-                    <div className="absolute bottom-0 right-0">
+                    {/* <div className="absolute bottom-0 right-0">
                         <img src="/images/broski4.png" className="w-64" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

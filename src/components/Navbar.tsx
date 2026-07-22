@@ -11,6 +11,7 @@ export function Navbar() {
                     <img src="/images/LogoLetterworkWhite.svg" alt="Geerts Groen logo" className="w-full h-16 object-contain" />
                 </Link>
                 <nav className="flex items-center gap-4 md:gap-8">
+                    <h1 className="text-white/80 font-semibold bg-red-500 text-sm px-2 py-1 rounded-md">Let op, deze website is nog in ontwikkeling!</h1>
                     <button
                         type="button"
                         onClick={() => scrollToSection("diensten")}
