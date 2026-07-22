@@ -8,19 +8,20 @@ export function Navbar() {
                     <img src="/images/LogoLetterworkWhite.svg" alt="Geerts Groen logo" className="w-full h-16 object-contain" />
                 </Link>
                 <nav className="flex items-center gap-4 md:gap-8">
-                    <Link
-                        to="/"
-                        hash="projecten"
-                        className="text-white/80 font-semibold hover:text-white transition-colors duration-200"
-                    >
-                        Projecten
-                    </Link>
+                    
                     <Link
                         to="/"
                         hash="diensten"
                         className="text-white/80 font-semibold hover:text-white transition-colors duration-200"
                     >
                         Diensten
+                    </Link>
+                    <Link
+                        to="/"
+                        hash="projecten"
+                        className="text-white/80 font-semibold hover:text-white transition-colors duration-200"
+                    >
+                        Projecten
                     </Link>
                     <Link
                         to="/"
