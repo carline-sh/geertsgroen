@@ -48,10 +48,10 @@ export function ProjectsCarousel() {
             <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-24">
                 <div className="max-w-3xl mx-auto text-center space-y-4 mb-10 md:mb-12">
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold text-[#2E3A2B]">
-                        Ons werk
+                        Projecten
                     </h2>
                     <p className="text-lg text-[#2E3A2B]/75 leading-relaxed">
-                        Bekijk een selectie van tuinprojecten die wij hebben uitgevoerd.
+                        Bekijk een selectie van tuinprojecten die ik heb uitgevoerd.
                     </p>
                 </div>
 

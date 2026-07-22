@@ -81,7 +81,7 @@ singletons:
       - name: ctaText
         label: Knop tekst
         widget: string
-        hint: Bijv. "Stuur ons een berichtje!"
+        hint: Bijv. "Stuur mij een berichtje!"
       - name: portraitImage
         label: Portret afbeelding
         widget: image
@@ -168,7 +168,7 @@ singletons:
       - name: ctaText
         label: Knop tekst
         widget: string
-        hint: Bijv. "Stuur ons een berichtje!"
+        hint: Bijv. "Stuur mij een berichtje!"
 
 collections:
   - name: projecten
