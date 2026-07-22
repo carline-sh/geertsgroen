@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { whatsappNumber } from "../../content/company.json";
-import { title, subtitle, ctaText, portraitImage, images } from '../../content/hero.json';
+import { title, subtitle, ctaText, images } from '../../content/hero.json';
 
 export function Hero() {
     const [current, setCurrent] = useState(0);
