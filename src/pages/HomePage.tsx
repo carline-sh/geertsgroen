@@ -9,7 +9,7 @@ export function HomePage() {
         <>
             <Hero />
             <About />
-            <Works />
+            <Works />   
             <ProjectsCarousel />
             <Contact />
         </>

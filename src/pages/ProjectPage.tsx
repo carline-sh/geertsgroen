@@ -1,4 +1,5 @@
 import { Link, getRouteApi } from "@tanstack/react-router";
+import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import {
     formatProjectDate,
@@ -6,12 +7,18 @@ import {
     getProjectBySlug,
     getProjectCoverImage,
 } from "../lib/projects";
+import { useScrollToSection } from "../lib/scroll";
 
 const projectRoute = getRouteApi("/projecten/$slug");
 
 export function ProjectPage() {
     const { slug } = projectRoute.useParams();
     const project = getProjectBySlug(slug);
+    const scrollToSection = useScrollToSection();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [slug]);
 
     if (!project) {
         return (
@@ -46,13 +53,13 @@ export function ProjectPage() {
                 )}
                 <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-black/20" />
                 <div className="relative max-w-5xl mx-auto px-4 md:px-8 pt-28 pb-12 md:pb-16 text-white space-y-4">
-                    <Link
-                        to="/"
-                        hash="projecten"
-                        className="inline-flex items-center text-white/80 hover:text-white transition-colors duration-200"
+                    <button
+                        type="button"
+                        onClick={() => scrollToSection("projecten")}
+                        className="inline-flex items-center text-white/80 hover:text-white transition-colors duration-200 cursor-pointer"
                     >
                         ← Terug naar projecten
-                    </Link>
+                    </button>
                     <h1 className="text-3xl md:text-5xl miranda-sans-bold leading-tight">{project.title}</h1>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 text-white/80">
                         {categoryLabel && <span>{categoryLabel}</span>}

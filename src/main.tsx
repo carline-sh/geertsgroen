@@ -3,7 +3,20 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import { routeTree } from "./routeTree.gen";
 
-const router = createRouter({ routeTree });
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
+if (window.location.pathname === "/" && window.location.hash) {
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+}
+
+window.scrollTo(0, 0);
+
+const router = createRouter({
+    routeTree,
+    scrollRestoration: false,
+});
 
 declare module "@tanstack/react-router" {
     interface Register {
