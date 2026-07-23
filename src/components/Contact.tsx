@@ -20,16 +20,15 @@ export function Contact() {
                 </div>
             </div> */}
             <div className="relative max-w-6xl mx-auto rounded-4xl bg-[#FDC005] wrap-break-word py-12 text-white flex items-center justify-center px-12 mb-12">
-                <div className="grid grid-cols-3 gap-4">
-                    <div className="col-span-2 space-y-4">
-
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div className="lg:col-span-2 space-y-4">
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold">{heading}</h2>
                     <p className="text-lg opacity-90">{body}</p>
                         </div>
                     <div className="space-y-4">
                         <a
                             href={"https://wa.me/" + whatsappNumber}
-                            className="font-sans flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#2e5713] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
                             >
@@ -38,7 +37,7 @@ export function Contact() {
                         </a>
                         <a
                             href={"tel:" + phone}
-                            className="font-sans flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#2e5713] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -47,7 +46,7 @@ export function Contact() {
                         </a>
                         <a
                             href={"mailto:" + email}
-                            className="font-sans flex items-center gap-3 bg-[#0c80ce] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#2e5713] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
