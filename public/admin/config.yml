@@ -165,10 +165,18 @@ singletons:
         label: Tekst
         widget: text
         hint: Bijv. "Neem contact met ons op voor een vrijblijvende offerte."
-      - name: ctaText
-        label: Knop tekst
+      - name: whatsappText
+        label: WhatsApp tekst
         widget: string
-        hint: Bijv. "Stuur mij een berichtje!"
+        hint: Bijv. "Stuur me een berichtje!"
+      - name: phoneText
+        label: Telefoon tekst
+        widget: string
+        hint: Bijv. "Bel me op"
+      - name: emailText
+        label: E-mail tekst
+        widget: string
+        hint: Bijv. "Stuur me een e-mail!"
 
 collections:
   - name: projecten
