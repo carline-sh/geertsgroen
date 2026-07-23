@@ -5,7 +5,7 @@ import { FiMail, FiPhone } from "react-icons/fi";
 
 export function Contact() {
     return (
-        <div id="contact" className="w-full scroll-mt-28 relative bg-[#F5F0E6] pb-12">
+        <div id="contact" className="w-full scroll-mt-28 relative bg-[#F5F0E6] pb-12 pt-12">
             {/* <div className="absolute left-0 right-0 -top-8 md:-top-20 z-10 pointer-events-none">
                 <div className="max-w-7xl mx-auto px-4 md:px-8">
                      <div className="max-w-4xl mx-auto">
