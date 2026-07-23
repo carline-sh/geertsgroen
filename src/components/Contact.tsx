@@ -19,23 +19,26 @@ export function Contact() {
                     </div>
                 </div>
             </div> */}
-            <div className="relative max-w-7xl mx-auto rounded-4xl bg-[#FDC005] wrap-break-word pt-20 md:pt-28 pb-12 md:pb-24 text-white flex items-center justify-center px-4">
-                <div className="space-y-4 text-center">
+            <div className="relative max-w-6xl mx-auto rounded-4xl bg-[#FDC005] wrap-break-word py-12 text-white flex items-center justify-center px-12 mb-12">
+                <div className="grid grid-cols-3 gap-4">
+                    <div className="col-span-2 space-y-4">
+
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold">{heading}</h2>
                     <p className="text-lg opacity-90">{body}</p>
-                    <div className="flex items-center justify-center gap-4">
+                        </div>
+                    <div className="space-y-4">
                         <a
                             href={"https://wa.me/" + whatsappNumber}
-                            className="font-sans inline-flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >
+                            >
                             <FaWhatsapp className="text-xl" />
                             <span>{whatsappText}</span>
                         </a>
                         <a
                             href={"tel:" + phone}
-                            className="font-sans inline-flex items-center gap-3 bg-[#6a530e] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -44,7 +47,7 @@ export function Contact() {
                         </a>
                         <a
                             href={"mailto:" + email}
-                            className="font-sans inline-flex items-center gap-3 bg-[#0c80ce] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
+                            className="font-sans flex items-center gap-3 bg-[#0c80ce] text-white font-bold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
