@@ -1,3 +1,4 @@
+import { FaChevronDown } from "react-icons/fa";
 import { heading, servicesCategories } from "../../content/services.json";
 
 export function Works() {
@@ -11,7 +12,7 @@ export function Works() {
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold text-white">
                         {heading}
                     </h2>
-                    <div className="grid gap-4 md:grid-cols-2 grid-cols-2">
+                    <div className="grid gap-4 md:grid-cols-2 grid-cols-1">
                         {servicesCategories.map((category) => (
                             <div
                                 key={category.categoryName}
@@ -25,11 +26,14 @@ export function Works() {
                                         key={service.serviceName}
                                         className="flex min-w-0 flex-col gap-3 bg-white/20 text-white rounded-md"
                                     >
-                                        <label className="text-lg md:text-xl leading-snug py-4 px-4 md:px-6"
+                                        <label className="text-lg leading-snug py-4 px-4 md:px-6 group cursor-pointer"
                                         >
-                                            <input type="checkbox" className="peer hidden" />
-                                            <span className="font-bold">{service.serviceName}</span>
-                                            <span className="hidden text-sm md:text-base leading-snug peer-checked:block">
+                                            <input type="checkbox" className="hidden" />
+                                            <span className="flex justify-between items-center gap-2">
+                                                <span>{service.serviceName}</span>
+                                                <FaChevronDown className="text-white transition-transform duration-300 group-has-checked:-rotate-90" />
+                                            </span>
+                                            <span className="hidden text-sm md:text-base leading-snug group-has-checked:block">
                                                 {service.serviceDescription}
                                             </span>
                                         </label>
