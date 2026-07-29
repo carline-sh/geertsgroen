@@ -5,7 +5,7 @@ export function About() {
         <section id="over-ons" className="w-full bg-[#F5F0E6] scroll-mt-28">
             <div className="max-w-7xl mx-auto wrap-break-word px-4 md:px-8 py-16 md:py-24">
                 <div className="max-w-5xl mx-auto space-y-10 md:space-y-12">
-                    <div className="space-y-4 text-center">
+                    <div className="space-y-4 md:text-center">
                         <h2 className="text-3xl md:text-4xl miranda-sans-bold text-[#2E3A2B]">
                             {heading}
                         </h2>
@@ -25,7 +25,7 @@ export function About() {
                             </div>
                         ))}
                     </div>
-                    <div className="space-y-4 text-center md:max-w-[80%] mx-auto">
+                    <div className="space-y-4 md:max-w-[80%] mx-auto md:text-center">
                         <p className="text-lg text-[#2E3A2B]/80 leading-relaxed">
                             {aboutBody}
                         </p>
