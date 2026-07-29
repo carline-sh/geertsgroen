@@ -144,16 +144,30 @@ singletons:
         label: Achtergrond afbeelding
         widget: image
         hint: 'Aanbevolen formaat: 1920x1080'
-      - name: servicesList
+      - name: servicesCategories
         label: Diensten lijst
         widget: list
-        summary: '{{serviceName}}'
-        hint: Bijv. Snoeien, Maaien, Beplanting, enz.
+        summary: '{{categoryName}}'
+        hint: Bijv. Onderhoud, Aanleg, enz.
         fields:
-          - name: serviceName
-            label: Dienst naam
+          - name: categoryName
+            label: Categorie naam
             widget: string
-            hint: Bijv. "Snoeien"
+            hint: Bijv. "Onderhoud"
+          - name: services
+            label: Diensten
+            widget: list
+            summary: '{{serviceName}}'
+            hint: Bijv. Snoeien, Maaien, Beplanting, enz.
+            fields:
+              - name: serviceName
+                label: Dienst naam
+                widget: string
+                hint: Bijv. "Snoeien"
+              - name: serviceDescription
+                label: Dienst beschrijving
+                widget: text
+                hint: Bijv. "Snoeien van uw tuin"
 
   - name: contact
     label: Contact Sectie

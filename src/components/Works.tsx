@@ -1,4 +1,4 @@
-import { heading, servicesList } from "../../content/services.json";
+import { heading, servicesCategories } from "../../content/services.json";
 
 export function Works() {
     return (
@@ -11,15 +11,30 @@ export function Works() {
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold text-white">
                         {heading}
                     </h2>
-                    <div className="grid gap-4 md:grid-cols-none md:grid-flow-col md:grid-rows-3 grid-cols-2">
-                        {servicesList.map((work) => (
+                    <div className="grid gap-4 md:grid-cols-2 grid-cols-2">
+                        {servicesCategories.map((category) => (
                             <div
-                                key={work.serviceName}
+                                key={category.categoryName}
                                 className="flex min-w-0 flex-col gap-3 bg-white/20 text-white rounded-md py-4 px-4 md:px-6"
                             >
                                 <span className="text-lg md:text-xl font-bold leading-snug">
-                                    {work.serviceName}
+                                    {category.categoryName}
                                 </span>
+                                {category.services.map((service) => (
+                                    <div
+                                        key={service.serviceName}
+                                        className="flex min-w-0 flex-col gap-3 bg-white/20 text-white rounded-md py-4 px-4 md:px-6"
+                                    >
+                                        <label className="text-lg md:text-xl font-bold leading-snug "
+                                        >
+                                            <input type="checkbox" className="peer" />
+                                            {service.serviceName}
+                                            <span className="hidden text-sm md:text-base leading-snug peer-checked:block">
+                                                {service.serviceDescription}
+                                            </span>
+                                        </label>
+                                    </div>
+                                ))}
                             </div>
                         ))}
                     </div>

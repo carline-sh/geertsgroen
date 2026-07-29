@@ -1,15 +1,44 @@
 {
   "heading": "Wat ik voor uw tuin kan doen",
   "backgroundImage": "/images/werkbg.jpg",
-  "servicesList": [
-    { "serviceName": "Snoeien" },
-    { "serviceName": "Maaien" },
-    { "serviceName": "Beplanting" },
-    { "serviceName": "Onderhoud" },
-    { "serviceName": "Plant speciaalzorg" },
-    { "serviceName": "Tuinontwerp" },
-    { "serviceName": "Bomen" },
-    { "serviceName": "Struiken" },
-    { "serviceName": "Renovatie" }
+  "servicesCategories": [
+    {
+      "categoryName": "Tuin onderhoud",
+      "services": [
+        {
+          "serviceName": "Gazon",
+          "serviceDescription": "Verticuteren, doorzaaien en bemesten van het gazon."
+        },
+        {
+          "serviceName": "Snoeien",
+          "serviceDescription": "Knippen van hagen, struiken en bomen."
+        },
+        {
+          "serviceName": "Onkruid",
+          "serviceDescription": "Verwijderen van onkruid in borders en bestrating."
+        },
+        {
+          "serviceName": "Schoonmaak",
+          "serviceDescription": "Borders schoonzetten, bladeren ruimen en schoonspuiten van bestrating."
+        }
+      ]
+    },
+    {
+      "categoryName": "Tuin aanleg",
+      "services": [
+        {
+          "serviceName": "Gazon",
+          "serviceDescription": "Aanbrengen van grasmatten of inzaaien."
+        },
+        {
+          "serviceName": "Bestrating",
+          "serviceDescription": "Leggen van terassen, opritten en tuinpaden."
+        },
+        {
+          "serviceName": "Groen aanbrengen",
+          "serviceDescription": "Planten van bomen, heggen en inrichten van borders."
+        }
+      ]
+    }
   ]
 }
