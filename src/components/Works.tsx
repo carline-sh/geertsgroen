@@ -23,12 +23,12 @@ export function Works() {
                                 {category.services.map((service) => (
                                     <div
                                         key={service.serviceName}
-                                        className="flex min-w-0 flex-col gap-3 bg-white/20 text-white rounded-md py-4 px-4 md:px-6"
+                                        className="flex min-w-0 flex-col gap-3 bg-white/20 text-white rounded-md"
                                     >
-                                        <label className="text-lg md:text-xl font-bold leading-snug "
+                                        <label className="text-lg md:text-xl leading-snug py-4 px-4 md:px-6"
                                         >
-                                            <input type="checkbox" className="peer" />
-                                            {service.serviceName}
+                                            <input type="checkbox" className="peer hidden" />
+                                            <span className="font-bold">{service.serviceName}</span>
                                             <span className="hidden text-sm md:text-base leading-snug peer-checked:block">
                                                 {service.serviceDescription}
                                             </span>
