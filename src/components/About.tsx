@@ -1,4 +1,4 @@
-import { heading, body, highlights } from '../../content/about.json';
+import { heading, body, highlights, aboutBody } from '../../content/about.json';
 
 export function About() {
     return (
@@ -14,7 +14,7 @@ export function About() {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                         {highlights.map((item) => (
                             <div
                                 key={item.title}
@@ -24,6 +24,11 @@ export function About() {
                                 <p className="text-[#2E3A2B]/75 leading-relaxed">{item.text}</p>
                             </div>
                         ))}
+                    </div>
+                    <div className="space-y-4 text-center md:max-w-[80%] mx-auto">
+                        <p className="text-lg text-[#2E3A2B]/80 leading-relaxed">
+                            {aboutBody}
+                        </p>
                     </div>
                 </div>
             </div>

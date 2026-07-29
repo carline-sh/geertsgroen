@@ -125,6 +125,10 @@ singletons:
             label: Tekst
             widget: text
             hint: Bijv. "We luisteren naar uw wensen..."
+      - name: aboutBody
+        label: Tekst onder de hoogtepunten
+        widget: text
+        hint: Bijv. "Bent u op zoek naar een hovenier die met plezier de handen uit de mouwen steekt en oog heeft voor detail? Dan help ik u graag verder."
 
   - name: services
     label: Diensten
