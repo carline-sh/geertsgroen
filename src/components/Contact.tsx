@@ -2,6 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { whatsappNumber, email, phone } from "../../content/company.json";
 import { heading, body, whatsappText, emailText, phoneText } from '../../content/contact.json';
 import { FiMail, FiPhone } from "react-icons/fi";
+import React from "react";
 
 export function Contact() {
     return (
@@ -20,10 +21,15 @@ export function Contact() {
                 </div>
             </div> */}
             <div className="relative max-w-6xl mx-auto rounded-4xl bg-[#FDC005] wrap-break-word py-12 text-white flex items-center justify-center px-12 mb-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
                     <div className="lg:col-span-2 space-y-4">
                         <h2 className="text-3xl md:text-4xl miranda-sans-bold">{heading}</h2>
-                        <p className="text-lg opacity-90">{body}</p>
+                        <p className="text-lg opacity-90">{body.split('\n').map((line, index) => (
+                            <React.Fragment key={index}>
+                                {line}
+                                <br />
+                            </React.Fragment>
+                        ))}</p>
                     </div>
                     <div className="space-y-4">
                         <a
