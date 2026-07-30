@@ -14,10 +14,10 @@ export function Navbar() {
 
     return (
         <>
-            <div className="w-full bg-[#2E3A2B]/60 backdrop-blur-sm h-20 px-4 fixed top-0 z-50">
-                <div className="w-full max-w-7xl mx-auto h-full flex items-center justify-between">
-                    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="w-44 md:w-auto h-16 shrink-0">
-                        <img src="/images/LogoLetterworkWhite.svg" alt="Geerts Groen logo" className="h-16 object-contain" />
+            <div className="w-full bg-[#2E3A2B]/60 backdrop-blur-sm fixed top-0 z-50">
+                <div className="w-full max-w-7xl mx-auto h-20 flex items-center justify-between px-4">
+                    <Link to="/" onClick={() => window.scrollTo(0, 0)} className="w-44 md:w-auto h-15 shrink-0">
+                        <img src="/images/LogoLetterworkWhite.svg" alt="Geerts Groen logo" className="h-15 object-contain" />
                     </Link>
                     <nav className="hidden md:flex items-center gap-4 md:gap-8" aria-label="Hoofdnavigatie">
                         <button
@@ -56,7 +56,7 @@ export function Navbar() {
                 {isMenuOpen && (
                     <nav
                         id="mobile-navigation"
-                        className="md:hidden absolute top-20 inset-x-0 bg-[#2E3A2B]/95 backdrop-blur-sm px-4 py-5 shadow-lg"
+                        className="md:hidden px-4 py-5 shadow-lg"
                         aria-label="Mobiele navigatie"
                     >
                         <div className="max-w-7xl mx-auto flex flex-col items-start gap-4">
