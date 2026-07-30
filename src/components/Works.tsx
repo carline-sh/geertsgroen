@@ -12,11 +12,11 @@ export function Works() {
                     <h2 className="text-3xl md:text-4xl miranda-sans-bold text-white">
                         {heading}
                     </h2>
-                    <div className="grid md:grid-cols-2 grid-cols-1 divide-y md:divide-x-3 md:divide-y-0 divide-[#FDC005] ">
+                    <div className="grid md:grid-cols-2 grid-cols-1 divide-y-3 md:divide-x-3 md:divide-y-0 divide-[#FDC005] ">
                         {servicesCategories.map((category) => (
                             <div
                                 key={category.categoryName}
-                                className="flex min-w-0 flex-col gap-3 text-white py-4 px-4 md:px-6 first:pl-0 last:pr-0"
+                                className="flex min-w-0 flex-col gap-3 text-white pb-8 pt-4 last:pb-0 md:py-4 md:px-4 md:first:pl-0 md:last:pr-0"
                             >
                                 <span className="text-lg md:text-xl font-bold leading-snug">
                                     {category.categoryName}
