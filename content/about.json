@@ -11,5 +11,23 @@
       "text": "Bij Geerts Groen staan kwaliteit, betrouwbaarheid en persoonlijk contact centraal. Ik werk met zorg en aandacht, zodat u kunt genieten van een tuin die niet alleen mooi is, maar ook goed onderhouden blijft."
     }
   ],
-  "aboutBody": "Bent u op zoek naar een hovenier die met plezier de handen uit de mouwen steekt en oog heeft voor detail? Dan help ik u graag verder."
+  "aboutBody": "Bent u op zoek naar een hovenier die met plezier de handen uit de mouwen steekt en oog heeft voor detail? Dan help ik u graag verder.",
+  "galleryImages": [
+    {
+      "image": "/images/willemMetTak.jpg",
+      "alt": "Willem Geerts met een tak in de tuin"
+    },
+    {
+      "image": "/images/willemActieFoto.jpg",
+      "alt": "Tuinwerkzaamheden in de buitenruimte"
+    },
+    {
+      "image": "/images/willemEnStruik.jpg",
+      "alt": "Tuin aanleggen met zorgvuldige aandacht"
+    },
+    {
+      "image": "/images/willemEnGras.jpg",
+      "alt": "Mooi verzorgde tuinomgeving"
+    }
+  ]
 }

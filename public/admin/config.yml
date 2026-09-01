@@ -129,6 +129,21 @@ singletons:
         label: Tekst onder de hoogtepunten
         widget: text
         hint: Bijv. "Bent u op zoek naar een hovenier die met plezier de handen uit de mouwen steekt en oog heeft voor detail? Dan help ik u graag verder."
+      - name: galleryImages
+        label: Over ons galerij
+        widget: list
+        hint: Voeg foto's toe die links in de Over Ons-sectie worden getoond
+        summary: '{{image | default("Geen afbeelding")}}'
+        fields:
+          - name: image
+            label: Afbeelding
+            widget: image
+            hint: 'Aanbevolen formaat: staand portret, bij voorkeur met een persoon in beeld'
+          - name: alt
+            label: Alt tekst
+            widget: string
+            required: false
+            hint: Beschrijving voor schermlezers
 
   - name: services
     label: Diensten
