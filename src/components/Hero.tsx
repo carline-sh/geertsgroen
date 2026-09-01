@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import classNames from "classnames";
 import { FaWhatsapp } from "react-icons/fa";
 import { whatsappNumber } from "../../content/company.json";
 import { title, subtitle, ctaText, images } from '../../content/hero.json';
@@ -95,7 +96,12 @@ export function Hero() {
                         className="w-11 h-11 -mx-3 flex items-center justify-center cursor-pointer"
                         aria-label={`Foto ${i + 1}`}
                     >
-                        <span className={`h-2 rounded-full transition-all duration-300 ${i === current ? "bg-white w-6" : "bg-white/40 hover:bg-white/60 w-2"}`} />
+                        <span
+                            className={classNames('h-2 rounded-full transition-all duration-300', {
+                                'w-6 bg-white': i === current,
+                                'w-2 bg-white/40 hover:bg-white/60': i !== current,
+                            })}
+                        />
                     </button>
                 ))}
             </div>

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import classNames from "classnames";
 import { Link } from "@tanstack/react-router";
 import {
     formatProjectDate,
@@ -130,11 +131,12 @@ export function ProjectsCarousel() {
                                     className="w-11 h-11 -mx-3 flex items-center justify-center cursor-pointer"
                                     aria-label={`Project ${index + 1}: ${item.title}`}
                                 >
-                                    <span className={`h-2 rounded-full transition-all duration-300 ${
-                                        index === current
-                                            ? "w-6 bg-[#2E3A2B]"
-                                            : "w-2 bg-[#2E3A2B]/30 hover:bg-[#2E3A2B]/50"
-                                    }`} />
+                                    <span
+                                        className={classNames('h-2 rounded-full transition-all duration-300', {
+                                            'w-6 bg-[#2E3A2B]': index === current,
+                                            'w-2 bg-[#2E3A2B]/30 hover:bg-[#2E3A2B]/50': index !== current,
+                                        })}
+                                    />
                                 </button>
                             ))}
                         </div>

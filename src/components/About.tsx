@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import classNames from 'classnames';
 import { heading, body, highlights, aboutBody, galleryImages } from '../../content/about.json';
 
 export function About() {
@@ -38,7 +39,12 @@ export function About() {
                                             aria-label={`Foto ${index + 1}`}
                                             className="w-11 h-4 -mx-3 flex items-center justify-center cursor-pointer"
                                         >
-                                            <span className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'bg-white w-6' : 'bg-white/50 hover:bg-white/80 w-2'}`} />
+                                            <span
+                                                className={classNames('h-2 rounded-full transition-all duration-300', {
+                                                    'w-6 bg-white': index === activeIndex,
+                                                    'w-2 bg-white/50 hover:bg-white/80': index !== activeIndex,
+                                                })}
+                                            />
                                         </button>
                                     ))}
                                 </div>
