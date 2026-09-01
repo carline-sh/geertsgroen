@@ -73,9 +73,9 @@ export function Navbar() {
                     </nav>
                 )}
             </div>
-            <div className="w-full fixed top-20 inset-x-0 text-white/80 bg-red-500 text-sm px-2 py-1 z-10">
+            {/* <div className="w-full fixed top-20 inset-x-0 text-white/80 bg-red-500 text-sm px-2 py-1 z-10">
                 <p className="font-semibold">Let op, deze website is nog in ontwikkeling!</p>
-            </div>
+            </div> */}
         </>
     );
 }
