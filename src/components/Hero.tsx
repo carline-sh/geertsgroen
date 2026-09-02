@@ -49,14 +49,14 @@ export function Hero() {
 
             <button
                 onClick={() => goTo((current - 1 + images.length) % images.length)}
-                className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                className="absolute left-0 md:left-2 top-1/2 hidden md:flex -translate-y-1/2 z-10 w-11 h-11 items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                 aria-label="Vorige foto"
             >
                 ‹
             </button>
             <button
                 onClick={() => goTo((current + 1) % images.length)}
-                className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-10 w-11 h-11 flex items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
+                className="absolute right-0 md:right-2 top-1/2 hidden md:flex -translate-y-1/2 z-10 w-11 h-11 items-center justify-center text-white/60 hover:text-white text-3xl md:text-4xl transition-colors duration-200 cursor-pointer"
                 aria-label="Volgende foto"
             >
                 ›
