@@ -5,13 +5,13 @@
   "portraitImage": "/images/broski3.png",
   "images": [
     {
-      "image": "/images/herotuin.jpg"
+      "image": "/images/herotuin.webp"
     },
     {
-      "image": "/images/herotuin2.jpg"
+      "image": "/images/herotuin2.webp"
     },
     {
-      "image": "/images/herotuin1.jpg"
+      "image": "/images/herotuin1.webp"
     }
     
   ]
