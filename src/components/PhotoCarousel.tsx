@@ -86,7 +86,7 @@ export function PhotoCarousel() {
                     behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
                 });
             }}
-            className="absolute right-4 top-1/2 -translate-y-1/2 flex size-11 items-center justify-center rounded-full bg-black/45 backdrop-blur-[1px] text-white/60 hover:text-white transition-colors duration-200 cursor-pointer disabled:opacity-40 disabled:cursor-default focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5713] md:hidden"
+            className="absolute right-4 top-1/2 -translate-y-1/2 flex size-11 items-center justify-center rounded-full bg-black/45 backdrop-blur-[1px] text-white/60 hover:text-white transition-colors duration-200 cursor-pointer disabled:opacity-40 disabled:cursor-default focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2e5713]"
         >
             <FaArrowRight aria-hidden="true" />
         </button>
